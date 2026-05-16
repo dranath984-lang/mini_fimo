@@ -1,0 +1,24 @@
+# 1-order Markov frequencies from file data/fasta/fasta_background/Pvulgaris_1000bp_upstream_fondo_TSS.fasta
+# seqs: 1    min: 1000    max: 1000    avg: 1000.0    sum: 1000    alph: DNA
+# order 0
+A 3.780e-01
+C 1.220e-01
+G 1.220e-01
+T 3.780e-01
+# order 1
+AA 1.521e-01
+AC 4.354e-02
+AG 4.805e-02
+AT 1.341e-01
+CA 4.404e-02
+CC 1.952e-02
+CG 1.001e-02
+CT 4.805e-02
+GA 4.805e-02
+GC 1.101e-02
+GG 1.952e-02
+GT 4.354e-02
+TA 1.341e-01
+TC 4.805e-02
+TG 4.404e-02
+TT 1.521e-01

@@ -1,0 +1,3365 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<!-- Document definition -->
+<!-- http://zlab.bu.edu/~phaverty/SupplementalData/CisML/cisml.dtd -->
+<!DOCTYPE cis-element-search[
+<!ELEMENT cis-element-search (program-name, parameters, (pattern | multi-pattern-scan)*)>
+<!ELEMENT program-name (#PCDATA)>
+<!ELEMENT parameters (
+  pattern-file, 
+  sequence-file, 
+  background-seq-file?,
+  pattern-pvalue-cutoff?,
+  sequence-pvalue-cutoff?,
+  site-pvalue-cutoff?,
+  sequence-filtering,
+  ANY*
+ )>
+<!ELEMENT command-line (#PCDATA)>
+<!ELEMENT pattern-file (#PCDATA)>
+<!ELEMENT sequence-file (#PCDATA)>
+<!ELEMENT background-seq-file (#PCDATA)>
+<!ELEMENT pattern-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-pvalue-cutoff (#PCDATA)>
+<!ELEMENT site-pvalue-cutoff (#PCDATA)>
+<!ELEMENT sequence-filtering EMPTY>
+<!ELEMENT multi-pattern-scan (pattern+, ANY*)>
+<!ELEMENT pattern (scanned-sequence+, ANY*)>
+<!ELEMENT scanned-sequence (matched-element*, ANY*)>
+<!ELEMENT matched-element (sequence)>
+<!ELEMENT sequence (#PCDATA)>
+<!ATTLIST cis-element-search
+xmlns:xsi CDATA #IMPLIED
+xmlns:mem CDATA #IMPLIED
+xsi:schemaLocation CDATA #IMPLIED
+>
+<!ATTLIST sequence-filtering
+on-off CDATA #REQUIRED
+type CDATA #IMPLIED
+>
+<!ATTLIST multi-pattern-scan
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+>
+<!ATTLIST pattern
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+pvalue CDATA #IMPLIED
+score CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST scanned-sequence
+accession CDATA #REQUIRED
+name CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+length CDATA #IMPLIED
+db CDATA #IMPLIED
+lsid CDATA #IMPLIED
+>
+<!ATTLIST matched-element
+start CDATA #REQUIRED
+stop CDATA #REQUIRED
+score CDATA #IMPLIED
+pvalue CDATA #IMPLIED
+clusterid CDATA #IMPLIED
+>
+
+]>
+<cis-element-search
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://zlab.bu.edu/schema/cisml cisml.xsd"
+  xmlns="http://zlab.bu.edu/schema/cisml"
+  xmlns:mem="http://noble.gs.washington.edu/meme"
+>
+<program-name>fimo</program-name>
+<parameters>
+<command-line>fimo --bfile data/fasta/fasta_background/Pvulgaris_order1.bfile --thresh 1e-5 --no-pgc --oc results/fimo data/motivos/Pvu_TF_binding_motifs.meme data/fasta/fasta_analisis/target_batch.fasta</command-line>
+<pattern-file>data/motivos/Pvu_TF_binding_motifs.meme</pattern-file>
+<sequence-file>data/fasta/fasta_analisis/target_batch.fasta</sequence-file>
+<site-pvalue-cutoff>1e-05</site-pvalue-cutoff>
+<sequence-filtering on-off="off"/>
+</parameters>
+<pattern accession="Phvul.001G008200" name="MP00153">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G009800" name="MP00152">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G010400" name="MP00240">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="687" stop="673" score="16.5968" pvalue="7.38e-07">
+<sequence>TCATCTGCACCGCTG</sequence>
+<mem:qvalue>0.00435</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G016100" name="MP00237">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G018300" name="MP00107">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G018400" name="MP00468">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G023700" name="MP00188">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G031200" name="MP00088">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G031300" name="MP00135">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G059900" name="MP00277">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G060200" name="MP00464">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="325" stop="312" score="20.9194" pvalue="1.77e-08">
+<sequence>ACCGTTGACTTTTG</sequence>
+<mem:qvalue>0.000105</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G068200" name="MP00080">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G086800" name="MP00382">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G088200" name="MP00506">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="313" stop="325" score="19.3226" pvalue="1.19e-07">
+<sequence>AAAAGTCAACGGT</sequence>
+<mem:qvalue>0.000701</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G089100" name="MP00636">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G100200" name="MP00333">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G101000" name="MP00409">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G106800" name="MP00516">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G107600" name="MP00132">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G111800" name="MP00521">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G131000" name="MP00305">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G140100" name="MP00491">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G141000" name="MP00307">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G141900" name="MP00113">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G154700" name="MP00371">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G159300" name="MP00309">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G168700" name="MP00074">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G196100" name="MP00405">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G211700" name="MP00598">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G212800" name="MP00419">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G221500" name="MP00134">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G228600" name="MP00553">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G249300" name="MP00502">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G258000" name="MP00010">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.001G258700" name="MP00004">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G008600" name="MP00477">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G010300" name="MP00626">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G015100" name="MP00476">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G016100" name="MP00275">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="313" stop="323" score="18" pvalue="3.23e-07">
+<sequence>AAAAGTCAACG</sequence>
+<mem:qvalue>0.00191</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G016700" name="MP00401">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="687" stop="673" score="11.9032" pvalue="9.04e-06">
+<sequence>TCATCTGCACCGCTG</sequence>
+<mem:qvalue>0.0534</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G017600" name="MP00035">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G021400" name="MP00629">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G027200" name="MP00473">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G031000" name="MP00268">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G035900" name="MP00227">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="689" stop="670" score="11.6452" pvalue="8.49e-06">
+<sequence>AATCATCTGCACCGCTGTCT</sequence>
+<mem:qvalue>0.0498</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G043700" name="MP00433">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G055800" name="MP00549">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="687" stop="673" score="14.0161" pvalue="1.65e-06">
+<sequence>TCATCTGCACCGCTG</sequence>
+<mem:qvalue>0.00977</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G056300" name="MP00550">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G056800" name="MP00436">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G078600" name="MP00630">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G081600" name="MP00067">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="314" stop="323" score="13.6923" pvalue="3.88e-06">
+<sequence>AAAGTCAACG</sequence>
+<mem:qvalue>0.023</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G083800" name="MP00222">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G088600" name="MP00225">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G088900" name="MP00259">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G109400" name="MP00265">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G110900" name="MP00266">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G123700" name="MP00543">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G132500" name="MP00544">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G136000" name="MP00291">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G137300" name="MP00174">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G146400" name="MP00504">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G147600" name="MP00272">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G153900" name="MP00002">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G154000" name="MP00558">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G155300" name="MP00432">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G166700" name="MP00613">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G172300" name="MP00605">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G184600" name="MP00334">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G196800" name="MP00440">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="325" stop="313" score="17.9032" pvalue="1.34e-07">
+<sequence>ACCGTTGACTTTT</sequence>
+<mem:qvalue>0.000795</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G209300" name="MP00043">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G229800" name="MP00032">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G238400" name="MP00166">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G240900" name="MP00167">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="313" stop="323" score="18.5" pvalue="4.78e-07">
+<sequence>AAAAGTCAACG</sequence>
+<mem:qvalue>0.00284</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G242000" name="MP00443">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G260700" name="MP00271">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G267800" name="MP00584">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G282200" name="MP00574">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G286000" name="MP00555">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G293200" name="MP00448">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="313" stop="323" score="18.2097" pvalue="3.23e-07">
+<sequence>AAAAGTCAACG</sequence>
+<mem:qvalue>0.00191</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G295700" name="MP00027">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G307000" name="MP00460">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G312100" name="MP00045">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G316500" name="MP00364">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.002G328700" name="MP00459">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G008100" name="MP00256">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G008800" name="MP00155">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G013600" name="MP00500">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G037600" name="MP00219">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G039200" name="MP00096">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G039800" name="MP00220">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G045600" name="MP00221">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G072000" name="MP00207">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G102500" name="MP00520">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="687" stop="673" score="13.4677" pvalue="2.39e-06">
+<sequence>TCATCTGCACCGCTG</sequence>
+<mem:qvalue>0.0141</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G110100" name="MP00054">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G110400" name="MP00554">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G111800" name="MP00024">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G111900" name="MP00435">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G176800" name="MP00191">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G181900" name="MP00498">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G190900" name="MP00396">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G195700" name="MP00631">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G196600" name="MP00397">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G201300" name="MP00442">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G203600" name="MP00581">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G207700" name="MP00608">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G212800" name="MP00001">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G217600" name="MP00136">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G222900" name="MP00551">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G229600" name="MP00439">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G234600" name="MP00597">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G248500" name="MP00402">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+<matched-element start="494" stop="474" score="15.0484" pvalue="1.64e-06">
+<sequence>CTTTTTTTTTTTTTACTTTTT</sequence>
+<mem:qvalue>0.00935</mem:qvalue>
+</matched-element>
+<matched-element start="1000" stop="980" score="13.8065" pvalue="6.72e-06">
+<sequence>CTTCCTTCCTCACTTCTTTTT</sequence>
+<mem:qvalue>0.0167</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="930" stop="910" score="13.5484" pvalue="8.78e-06">
+<sequence>GCGTTTTCTTTCTTACTTTAC</sequence>
+<mem:qvalue>0.0167</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G251800" name="MP00473">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G252000" name="MP00039">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G252400" name="MP00592">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G254200" name="MP00238">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G285700" name="MP00084">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.003G292400" name="MP00469">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G012000" name="MP00324">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G017500" name="MP00323">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G028500" name="MP00386">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G045800" name="MP00389">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G068900" name="MP00509">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G072100" name="MP00215">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G076900" name="MP00518">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G084300" name="MP00196">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G090900" name="MP00028">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G097200" name="MP00184">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G119600" name="MP00575">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G122000" name="MP00557">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G143100" name="MP00363">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G143400" name="MP00146">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G143500" name="MP00232">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G144900" name="MP00145">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G145900" name="MP00254">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G163300" name="MP00379">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.004G171200" name="MP00565">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G005800" name="MP00071">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G011700" name="MP00078">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G035900" name="MP00508">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G044600" name="MP00250">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+<matched-element start="520" stop="500" score="14.5806" pvalue="4.12e-06">
+<sequence>AGTTGCTTATGATTGAAGACA</sequence>
+<mem:qvalue>0.0242</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G047300" name="MP00205">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+<matched-element start="500" stop="520" score="13" pvalue="5.88e-06">
+<sequence>TGTCTTCAATCATAAGCAACT</sequence>
+<mem:qvalue>0.0346</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G047400" name="MP00350">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G059000" name="MP00353">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G060000" name="MP00249">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G079400" name="MP00248">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G084500" name="MP00360">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G084600" name="MP00361">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G095000" name="MP00413">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G099800" name="MP00125">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G101900" name="MP00634">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G115500" name="MP00287">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G121800" name="MP00280">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+<matched-element start="829" stop="847" score="13.6774" pvalue="9.76e-06">
+<sequence>ATGGCTTCACCTAAAGGGA</sequence>
+<mem:qvalue>0.0574</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G123900" name="MP00331">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G124100" name="MP00131">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G130100" name="MP00522">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G134400" name="MP00130">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G134500" name="MP00461">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G150100" name="MP00233">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="379" stop="359" score="13.8684" pvalue="6.6e-06">
+<sequence>CCGGCCAAATTCTCTCTTTCT</sequence>
+<mem:qvalue>0.0388</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G153900" name="MP00126">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G161200" name="MP00199">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G166900" name="MP00200">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G180600" name="MP00526">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="667" stop="685" score="12" pvalue="4.4e-06">
+<sequence>AATAGACAGCGGTGCAGAT</sequence>
+<mem:qvalue>0.0258</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.005G181800" name="MP00251">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="325" stop="311" score="17.6613" pvalue="2.5e-07">
+<sequence>ACCGTTGACTTTTGA</sequence>
+<mem:qvalue>0.00148</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G011300" name="MP00367">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G023100" name="MP00310">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G028500" name="MP00082">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G029200" name="MP00117">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G047800" name="MP00194">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="673" stop="687" score="14.2419" pvalue="1.73e-06">
+<sequence>CAGCGGTGCAGATGA</sequence>
+<mem:qvalue>0.0102</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G053300" name="MP00455">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="325" stop="313" score="17.2742" pvalue="7.81e-07">
+<sequence>ACCGTTGACTTTT</sequence>
+<mem:qvalue>0.00462</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G061600" name="MP00564">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G064600" name="MP00567">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G087000" name="MP00212">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G104700" name="MP00532">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G111700" name="MP00525">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="314" stop="324" score="19.629" pvalue="1.83e-07">
+<sequence>AAAGTCAACGG</sequence>
+<mem:qvalue>0.00109</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G123000" name="MP00171">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="313" stop="325" score="20.0161" pvalue="6.41e-08">
+<sequence>AAAAGTCAACGGT</sequence>
+<mem:qvalue>0.000379</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G123700" name="MP00607">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+<matched-element start="231" stop="223" score="15.8939" pvalue="7.87e-07">
+<sequence>TTTAGGGCG</sequence>
+<mem:qvalue>0.00465</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G134700" name="MP00252">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G139200" name="MP00552">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+<matched-element start="883" stop="897" score="13.9545" pvalue="7.56e-06">
+<sequence>TGTTTTTTTTACTGT</sequence>
+<mem:qvalue>0.0446</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G147800" name="MP00209">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="323" stop="305" score="18.0909" pvalue="4.94e-07">
+<sequence>CGTTGACTTTTGACCGTTC</sequence>
+<mem:qvalue>0.00291</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G159700" name="MP00604">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G166600" name="MP00639">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G169600" name="MP00609">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G179700" name="MP00441">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G181200" name="MP00021">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G183200" name="MP00645">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G183900" name="MP00290">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G188900" name="MP00058">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G195500" name="MP00091">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.006G221500" name="MP00097">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G011600" name="MP00617">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G015000" name="MP00524">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G020900" name="MP00255">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G027000" name="MP00217">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="687" stop="673" score="14.5" pvalue="1.37e-06">
+<sequence>TCATCTGCACCGCTG</sequence>
+<mem:qvalue>0.00805</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G028700" name="MP00216">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G033200" name="MP00383">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G043200" name="MP00434">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="937" stop="923" score="12.9839" pvalue="2.73e-06">
+<sequence>ATGCCACGCGTTTTC</sequence>
+<mem:qvalue>0.0161</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G060500" name="MP00624">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G065900" name="MP00064">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G071900" name="MP00449">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+<matched-element start="968" stop="954" score="14.4677" pvalue="6.42e-06">
+<sequence>AAATGGCCTTTCTGC</sequence>
+<mem:qvalue>0.0379</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G074500" name="MP00625">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G075400" name="MP00561">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="325" stop="313" score="21" pvalue="3.33e-08">
+<sequence>ACCGTTGACTTTT</sequence>
+<mem:qvalue>0.000196</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G079700" name="MP00243">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G085600" name="MP00179">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G089600" name="MP00017">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G102900" name="MP00160">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G108500" name="MP00375">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G127800" name="MP00374">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G139600" name="MP00487">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G140300" name="MP00612">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G140500" name="MP00059">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G162800" name="MP00338">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+<matched-element start="108" stop="119" score="13.8871" pvalue="8.01e-06">
+<sequence>AGATATTTTCAC</sequence>
+<mem:qvalue>0.0473</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G177900" name="MP00284">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="313" stop="323" score="19.4032" pvalue="2.44e-07">
+<sequence>AAAAGTCAACG</sequence>
+<mem:qvalue>0.00144</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G179100" name="MP00099">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G186700" name="MP00011">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G187400" name="MP00040">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G195900" name="MP00133">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G201400" name="MP00670">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G206000" name="MP00081">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G210600" name="MP00633">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G212900" name="MP00069">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="316" stop="323" score="16.4222" pvalue="5.98e-06">
+<sequence>AGTCAACG</sequence>
+<mem:qvalue>0.0354</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G215800" name="MP00627">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G221400" name="MP00485">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G224400" name="MP00340">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G224800" name="MP00486">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G227300" name="MP00377">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G229600" name="MP00294">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G241600" name="MP00556">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G247600" name="MP00019">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G253000" name="MP00306">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G255100" name="MP00411">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="684" stop="674" score="13.0484" pvalue="3.02e-06">
+<sequence>TCTGCACCGCT</sequence>
+<mem:qvalue>0.0178</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G257100" name="MP00308">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+<matched-element start="514" stop="524" score="15.8028" pvalue="3.62e-06">
+<sequence>AGCAACTTGTC</sequence>
+<mem:qvalue>0.0215</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.007G272600" name="MP00102">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G001000" name="MP00507">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G019400" name="MP00288">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G023800" name="MP00647">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G028000" name="MP00388">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G037000" name="MP00046">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G038600" name="MP00213">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G048100" name="MP00618">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="324" stop="315" score="14.9189" pvalue="3.91e-06">
+<sequence>CCGTTGACTT</sequence>
+<mem:qvalue>0.0232</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G052000" name="MP00610">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+<matched-element start="480" stop="499" score="14.1447" pvalue="7.93e-06">
+<sequence>TAAAAAAAAAAAAAGAGTAA</sequence>
+<mem:qvalue>0.0148</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="193" stop="174" score="15.8158" pvalue="2.1e-06">
+<sequence>AGAAAAGAGAAAAAAATAGA</sequence>
+<mem:qvalue>0.0117</mem:qvalue>
+</matched-element>
+<matched-element start="191" stop="172" score="14.3158" pvalue="6.99e-06">
+<sequence>AAAAGAGAAAAAAATAGAAA</sequence>
+<mem:qvalue>0.0148</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G058300" name="MP00422">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="313" stop="325" score="20.0806" pvalue="4.29e-08">
+<sequence>AAAAGTCAACGGT</sequence>
+<mem:qvalue>0.000253</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G067300" name="MP00114">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G072700" name="MP00421">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G075900" name="MP00314">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G094800" name="MP00297">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G098300" name="MP00481">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G099400" name="MP00295">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G107000" name="MP00296">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G122100" name="MP00083">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G144300" name="MP00034">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G146900" name="MP00510">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G157600" name="MP00048">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G165000" name="MP00156">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G182900" name="MP00451">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="330" stop="316" score="14.2742" pvalue="3.27e-06">
+<sequence>TATCCACCGTTGACT</sequence>
+<mem:qvalue>0.0117</mem:qvalue>
+</matched-element>
+<matched-element start="393" stop="379" score="13.871" pvalue="3.96e-06">
+<sequence>TTTTGACCGTTCAAC</sequence>
+<mem:qvalue>0.0117</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G183700" name="MP00410">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G189100" name="MP00108">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G194600" name="MP00310">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G220400" name="MP00302">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G222400" name="MP00674">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G240700" name="MP00515">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G242400" name="MP00033">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G247800" name="MP00303">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G251300" name="MP00299">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="313" stop="323" score="17.9194" pvalue="3.74e-07">
+<sequence>AAAAGTCAACG</sequence>
+<mem:qvalue>0.00221</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G254600" name="MP00198">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G260900" name="MP00566">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G270400" name="MP00229">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+<matched-element start="737" stop="755" score="15.5354" pvalue="1.05e-06">
+<sequence>CTTCTTCTTGTTCATCCAC</sequence>
+<mem:qvalue>0.006</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.008G286100" name="MP00094">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="521" stop="511" score="13.012" pvalue="8.84e-06">
+<sequence>TTGACCGCTTA</sequence>
+<mem:qvalue>0.029</mem:qvalue>
+</matched-element>
+<matched-element start="314" stop="304" score="12.8554" pvalue="9.78e-06">
+<sequence>TTGACCGTTCT</sequence>
+<mem:qvalue>0.029</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G008000" name="MP00241">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G011200" name="MP00154">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G013900" name="MP00077">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G015000" name="MP00540">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G016300" name="MP00190">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G025400" name="MP00052">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G029600" name="MP00026">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G031200" name="MP00180">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G043100" name="MP00408">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="325" stop="313" score="20.7581" pvalue="5.21e-08">
+<sequence>ACCGTTGACTTTT</sequence>
+<mem:qvalue>0.000309</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G043200" name="MP00304">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="325" stop="314" score="18.6613" pvalue="2.27e-07">
+<sequence>ACCGTTGACTTT</sequence>
+<mem:qvalue>0.00134</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G065500" name="MP00186">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G065800" name="MP00187">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G070800" name="MP00162">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G075000" name="MP00089">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G080000" name="MP00531">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="323" stop="311" score="18.0323" pvalue="1.42e-07">
+<sequence>CGTTGACTTTTGA</sequence>
+<mem:qvalue>0.000836</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G089300" name="MP00526">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="667" stop="685" score="12" pvalue="4.4e-06">
+<sequence>AATAGACAGCGGTGCAGAT</sequence>
+<mem:qvalue>0.0258</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G106700" name="MP00466">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G119900" name="MP00479">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G125900" name="MP00121">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G137000" name="MP00456">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G150100" name="MP00583">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G160900" name="MP00095">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G178300" name="MP00580">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G183300" name="MP00236">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+<matched-element start="544" stop="554" score="14.4194" pvalue="5.03e-06">
+<sequence>TATGGATAAGA</sequence>
+<mem:qvalue>0.0299</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G186600" name="MP00394">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G187700" name="MP00395">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G199700" name="MP00261">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G202200" name="MP00065">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G204000" name="MP00570">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G207000" name="MP00659">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G225000" name="MP00151">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="372" stop="385" score="14.3871" pvalue="4.71e-06">
+<sequence>TTGGCCGGTTGAAC</sequence>
+<mem:qvalue>0.0278</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G251600" name="MP00109">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.009G262200" name="MP00204">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G013500" name="MP00407">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="228" stop="248" score="16.5323" pvalue="3.99e-07">
+<sequence>TTTTCTTTTTATTTTTTCCCT</sequence>
+<mem:qvalue>0.00224</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G024800" name="MP00660">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G054000" name="MP00312">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G056000" name="MP00090">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G071300" name="MP00416">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G079200" name="MP00620">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G087900" name="MP00315">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G089100" name="MP00638">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G103200" name="MP00423">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G108800" name="MP00318">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G114800" name="MP00100">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G114900" name="MP00120">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G117200" name="MP00320">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G118700" name="MP00321">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G126400" name="MP00356">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G136000" name="MP00231">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G136100" name="MP00652">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G138200" name="MP00206">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.010G159500" name="MP00526">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="667" stop="685" score="12" pvalue="4.4e-06">
+<sequence>AATAGACAGCGGTGCAGAT</sequence>
+<mem:qvalue>0.0258</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G001800" name="MP00181">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+<matched-element start="524" stop="514" score="14.9032" pvalue="6.44e-06">
+<sequence>GACAAGTTGCT</sequence>
+<mem:qvalue>0.0381</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G003900" name="MP00431">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+<matched-element start="520" stop="500" score="13.6452" pvalue="7.47e-06">
+<sequence>AGTTGCTTATGATTGAAGACA</sequence>
+<mem:qvalue>0.0439</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G042600" name="MP00239">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G057400" name="MP00195">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+<matched-element start="512" stop="525" score="14.6452" pvalue="7.85e-06">
+<sequence>TAAGCAACTTGTCA</sequence>
+<mem:qvalue>0.0464</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G059800" name="MP00336">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G062100" name="MP00014">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G071100" name="MP00615">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G080200" name="MP00047">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G116500" name="MP00128">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G120300" name="MP00326">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G124200" name="MP00022">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G125200" name="MP00623">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G156900" name="MP00203">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G160400" name="MP00562">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G162900" name="MP00358">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+<matched-element start="684" stop="670" score="9.41935" pvalue="8.31e-06">
+<sequence>TCTGCACCGCTGTCT</sequence>
+<mem:qvalue>0.0492</mem:qvalue>
+</matched-element>
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G191300" name="MP00490">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G197300" name="MP00211">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.011G203400" name="MP00349">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+<pattern accession="Phvul.L010000" name="MP00257">
+<scanned-sequence accession="Phvul.001G004200" name="Phvul.001G004200">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.004G173900" name="Phvul.004G173900">
+</scanned-sequence>
+<scanned-sequence accession="Phvul.006G134700" name="Phvul.006G134700">
+</scanned-sequence>
+<mem:has-qvalues>yes</mem:has-qvalues>
+</pattern>
+</cis-element-search>

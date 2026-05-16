@@ -1,0 +1,2537 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:cis="http://zlab.bu.edu/schema/cisml" xmlns:fimo="http://noble.gs.washington.edu/schema/cisml" xmlns:mem="http://noble.gs.washington.edu/meme">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>FIMO Results</title>
+<style type="text/css">
+td.left {text-align: left;}
+td.right {text-align: right; padding-right: 1cm;}
+</style>
+</head>
+<body color="#000000">
+<a name="top_buttons"></a>
+<hr>
+<table summary="buttons" align="left" cellspacing="0">
+<tr>
+<td bgcolor="#00FFFF"><a href="#database_and_motifs"><b>Database and Motifs</b></a></td>
+<td bgcolor="#DDFFDD"><a href="#sec_i"><b>High-scoring Motif Occurences</b></a></td>
+<td bgcolor="#DDDDFF"><a href="#debugging_information"><b>Debugging Information</b></a></td>
+<td bgcolor="#FFDD00"><a href="fimo.tsv""><b>Results in TSV Format</b></a></td>
+<td bgcolor="#FFDDFF"><a href="fimo.gff""><b>Results in GFF3 Format</b></a></td>
+<td bgcolor="#00FFFF" id="best_site"><a href="best_site.narrowPeak""><b>Best Site per Sequence</b></a></td>
+<script>
+var new_icon_src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAMAAAAyEe/dAAAACVBMVEX//wAAAAD////s2cV/AAAAdUlEQVQYlXVRBxLAIAhL+P+jC2HZhXcBZEWEldDsZcLIcAhHWWnK8SDcWQhMFUHdAQ1CqQ5+CWPmlHojl+nCJNRtzu4qRc3IUzmTVpXYK0nox0z0PI1stgchdK7lEv7ekhvalw8WW547Gyzedt/2/gLx8WXjXF/1AYFriNAWAAAAAElFTkSuQmCC";
+var new_icon = document.createElement("img");
+new_icon.src = new_icon_src;
+new_icon.alt = "NEW";
+const elem = document.getElementById("best_site");
+elem.appendChild(document.createTextNode("  "));
+elem.appendChild(new_icon);
+</script>
+</tr>
+</table>
+<br/>
+<br/>
+<hr/>
+<center><big><b>FIMO - Motif search tool</b></big></center>
+<hr>
+<p>
+FIMO version 5.5.9, (Release date: Fri Nov 21 15:33:51 2025 -0800)
+</p>
+<p>
+For further information on how to interpret these results please access <a href="https://meme-suite.org/meme/doc/fimo-output-format.html">https://meme-suite.org/meme/doc/fimo-output-format.html</a>.<br>
+To get a copy of the FIMO software please access <a href="https://meme-suite.org">https://meme-suite.org</a>
+
+</p>
+<p>If you use FIMO in your research, please cite the following paper:<br>
+Charles E. Grant, Timothy L. Bailey, and William Stafford Noble,
+"FIMO: Scanning for occurrences of a given motif",
+<i>Bioinformatics</i>, <b>27</b>(7):1017-1018, 2011.
+<a href="http://bioinformatics.oxfordjournals.org/content/27/7/1017">[full text]</a></p>
+<hr>
+<center><big><b><a name="database_and_motifs">DATABASE AND MOTIFS</a></b></big></center>
+<hr>
+<div style="padding-left: 0.75in; line-height: 1em; font-family: monospace;">
+<p>
+  DATABASE data/fasta/fasta_analisis/target_batch.fasta
+  <br />
+  Database contains 3 sequences, 3000 residues
+</p>
+<p>
+  MOTIFS data/motivos/Pvu_TF_binding_motifs.meme (DNA)
+  <table>
+    <thead>
+      <tr>
+        <th style="border-bottom: 1px dashed;">MOTIF</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;">WIDTH</th>
+        <th style="border-bottom: 1px dashed; padding-left: 1em;text-align:left;" >
+         BEST POSSIBLE MATCH
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="text-align:right;">Phvul.001G008200</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">GCCGACAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G009800</td>
+        <td style="text-align:right;padding-left: 1em;">23</td>
+        <td style="text-align:left;padding-left: 1em;">AAACCCTAAACCCTAAACCCTAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G010400</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCACCTCCACCGCCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G016100</td>
+        <td style="text-align:right;padding-left: 1em;">20</td>
+        <td style="text-align:left;padding-left: 1em;">CCACACGTGCGACTTTTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G018300</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">GAATATTC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G018400</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TTTACGTTTTTGGCGGGAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G023700</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">GTGTCGGTGGTGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G031200</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TGGCACAGTTCCCGAGGTGAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G031300</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">CGTGAAAAGCACGTGACACCT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G059900</td>
+        <td style="text-align:right;padding-left: 1em;">18</td>
+        <td style="text-align:left;padding-left: 1em;">TTACGTGTGGAACAAGTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G060200</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">AGCGTTGACTTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G068200</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">CCAAAAAAGGAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G086800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ATATACATGCATGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G088200</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGTCAACGAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G089100</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">GGGGCCCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G100200</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAGTTACGTGTAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G101000</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AATGGACACGTGGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G106800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ATAAATAACGGTATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G107600</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">CTTTTCCAACCACCTTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G111800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCGCCGCCGCCGGCG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G131000</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CTTCTAGAAGCTTCT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G140100</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">GATGATGACGTCACT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G141000</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">ATTGTACGGAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G141900</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">AAACAAAAAGTTAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G154700</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AGAAGCTTCTAGAAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G159300</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCGGAAAATCCGGAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G168700</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">AGAAGGTCACGTGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G196100</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">CAAAAAGTTAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G211700</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">TGGTAGGTAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G212800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">GATGCTGACGTGGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G221500</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TCCACCTACCACCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G228600</td>
+        <td style="text-align:right;padding-left: 1em;">6</td>
+        <td style="text-align:left;padding-left: 1em;">TGGTGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G249300</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TGACGTCATCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G258000</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">AAAGATACGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.001G258700</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">GGTTAACC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G008600</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">ACTAATCATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G010300</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">CTAGGGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G015100</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TAACCGTAATA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G016100</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGTCAACG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G016700</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCACCTCCACCGACA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G017600</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">CCCACGTGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G021400</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">GTAGATTCCGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G027200</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">AAACCAATAATTGAAAATTAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G031000</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAATGTAATTAATTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G035900</td>
+        <td style="text-align:right;padding-left: 1em;">20</td>
+        <td style="text-align:left;padding-left: 1em;">CACCGCCGCCGCCACCGCCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G043700</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ATTTAAAATTCAAAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G055800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCACCGCCGCCGCCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G056300</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">ATTAATCATTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G056800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CACCGCCACCGACAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G078600</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">TTGGATAAGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G081600</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">AAAGTCAACG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G083800</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">TTAATTACCGTTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G088600</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TCAATAATTAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G088900</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ACCACACGCGCCTCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G109400</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TCATTCATTCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G110900</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">CTTGTATTTCACG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G123700</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TCACACGTGTGAACT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G132500</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGAATATTCTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G136000</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AATGGTCACGTGGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G137300</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ATTAGAATATTCTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G146400</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCTCGGGATTCGTGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G147600</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ACTTTCCTTTTTTGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G153900</td>
+        <td style="text-align:right;padding-left: 1em;">22</td>
+        <td style="text-align:left;padding-left: 1em;">GGTGGTGATGTCGGCGAGGATA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G154000</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TTTTGTCGGCAAAGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G155300</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">TTCTAGAAGCTTCT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G166700</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">CCCCTAGGGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G172300</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">CCAAAAATGGAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G184600</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TTGGTAAAGTTAGGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G196800</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">ATCGTTGACTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G209300</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">AAACCGCGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G229800</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">ATGCATGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G238400</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAAAAGAAAAAGTGAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G240900</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGTCAACG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G242000</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">TCTAGAAGCTTCTAGAAGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G260700</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">CAATCATTTAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G267800</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">GGCGGAAATGGCGGCGGCG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G282200</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">ATCCGACAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G286000</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">ATTGTACGGAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G293200</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGTCAACG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G295700</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">CCGCCGCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G307000</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AGCGTGAAGAAGAAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G312100</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">AATTTGAATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G316500</td>
+        <td style="text-align:right;padding-left: 1em;">16</td>
+        <td style="text-align:left;padding-left: 1em;">CTTGTGCAACACGTAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.002G328700</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CTTCTTCTTCACGCT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G008100</td>
+        <td style="text-align:right;padding-left: 1em;">17</td>
+        <td style="text-align:left;padding-left: 1em;">CACAAAACGACAAAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G008800</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TCCGTACAATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G013600</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">AATATGGATAAGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G037600</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CACGTGACTTTCACG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G039200</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">CCAAAAATGGAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G039800</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">TATGATTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G045600</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">ACACGTAACTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G072000</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">GAGGTGGCACGTGGCATTCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G102500</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCGCCGCCGCCGCCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G110100</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">GCGAATCTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G110400</td>
+        <td style="text-align:right;padding-left: 1em;">27</td>
+        <td style="text-align:left;padding-left: 1em;">CATCATCATCATCATCATCATCATCAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G111800</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">TATGTTGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G111900</td>
+        <td style="text-align:right;padding-left: 1em;">18</td>
+        <td style="text-align:left;padding-left: 1em;">CCGTGTAAAAAACGCGTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G176800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ATTAACCTTATCCTC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G181900</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">CACGTGACATCCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G190900</td>
+        <td style="text-align:right;padding-left: 1em;">20</td>
+        <td style="text-align:left;padding-left: 1em;">ACAGAGGATGTGGGACCCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G195700</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">TGGATAAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G196600</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAAATTTTCCCGCCAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G201300</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAAATGTAACGGATA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G203600</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TCCGCCGCCGCCTCCGCCGCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G207700</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAACAGAGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G212800</td>
+        <td style="text-align:right;padding-left: 1em;">22</td>
+        <td style="text-align:left;padding-left: 1em;">TGGGGTCATGTCGGCGACGGAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G217600</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CGTAAAAAACAAGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G222900</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ATAACCTTATCCATA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G229600</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TACTTGAAGATGAAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G234600</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">AAAATTAAACCCTAATTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G248500</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TTTTTTTTTTTTTTACTTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G251800</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">AAACCAATAATTGAAAATTAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G252000</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">TGACGTGGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G252400</td>
+        <td style="text-align:right;padding-left: 1em;">17</td>
+        <td style="text-align:left;padding-left: 1em;">AAGAAAACGACAAAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G254200</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">ACGTAATTAAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G285700</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">GCACGTGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.003G292400</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">GAAATTGCGGCGGCG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G012000</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">TTTACCTAACTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G017500</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TCAATAATTGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G028500</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TTCCCAACCACCAAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G045800</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">TGCTGACGTGGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G068900</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TCCGCCGCCGCCACCGCCGCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G072100</td>
+        <td style="text-align:right;padding-left: 1em;">30</td>
+        <td style="text-align:left;padding-left: 1em;">TGTGGGCCCCACCTCCTCTCTTGGGCCTAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G076900</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">TAACGTGTAGAACAAGTAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G084300</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ACCTTCCCCAGATAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G090900</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">GGCTCAGCGCG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G097200</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">TTGACAGCTGTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G119600</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">GAAGCTTCTAGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G122000</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">TGATGTCGGCGAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G143100</td>
+        <td style="text-align:right;padding-left: 1em;">17</td>
+        <td style="text-align:left;padding-left: 1em;">TACGTGTGGAACAAGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G143400</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAATATCTTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G143500</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">GCATTAAATGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G144900</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">CTTTACCGTTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G145900</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAAAGACAAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G163300</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">CTAGAAGCTTC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.004G171200</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AACCTTATCCATAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G005800</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">CGGTCAAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G011700</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">CTCACGCGCTCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G035900</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">CTTTCCTTTTTTGGAAAGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G044600</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">GGTAGCGTGAAATTCAAGCAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G047300</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TTGCTTGTTCTACACGTTACC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G047400</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">GTAGTGGTAATGTTAGGTGGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G059000</td>
+        <td style="text-align:right;padding-left: 1em;">17</td>
+        <td style="text-align:left;padding-left: 1em;">TGCCGTGAATTCGACGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G060000</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">CAACTACTCCACCAACCCCCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G079400</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">CGCACGTGTGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G084500</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TTTCAAATTTTACACGTAACT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G084600</td>
+        <td style="text-align:right;padding-left: 1em;">17</td>
+        <td style="text-align:left;padding-left: 1em;">CTTGTTCCACAAGAAAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G095000</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAATCTCCGGCGACG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G099800</td>
+        <td style="text-align:right;padding-left: 1em;">20</td>
+        <td style="text-align:left;padding-left: 1em;">CAGAAAACGACAAAAAAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G101900</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">TTGTACGGAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G115500</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AACCGTAACCGAATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G121800</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">GTTTCTTCATCTTCAAGTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G123900</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGAATCTTCTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G124100</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">GATGACGTCAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G130100</td>
+        <td style="text-align:right;padding-left: 1em;">18</td>
+        <td style="text-align:left;padding-left: 1em;">CAGATAACACCTGCACAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G134400</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AGATCTAGATCTGAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G134500</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TTTACGTTTTTGGCGGGAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G150100</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">GTGTCTAGGTTCATTGTATCT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G153900</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TACAGCTGGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G161200</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAGAAAAAGTAAAAAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G166900</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGTAATGATTAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G180600</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">CGGAGGTGGCGGCGGAGGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.005G181800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AACGTTGACTTTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G011300</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">GTCTAGATTCAATGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G023100</td>
+        <td style="text-align:right;padding-left: 1em;">20</td>
+        <td style="text-align:left;padding-left: 1em;">TGCCGTGATATCTACGCTAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G028500</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">TCACGTGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G029200</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AATGATGACGTGGCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G047800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TGGCGGCGGCGGTGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G053300</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">AACGTTGACTATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G061600</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAATTAGGTGAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G064600</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TAACCGTTACA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G087000</td>
+        <td style="text-align:right;padding-left: 1em;">16</td>
+        <td style="text-align:left;padding-left: 1em;">CTTGTTCTACAAGTAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G104700</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAAGAATATTCCAAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G111700</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AAAGTCAACGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G123000</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGTCAACGAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G123700</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">TTTAGGTTG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G134700</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGAATATTCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G139200</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TTTTTTTTTTACCGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G147800</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">CGTTGACTTTTTTTAACAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G159700</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">CCGTACGGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G166600</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">GGGACCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G169600</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">TTTTTTCCATTTTTGGTAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G179700</td>
+        <td style="text-align:right;padding-left: 1em;">17</td>
+        <td style="text-align:left;padding-left: 1em;">GCGGCGGCGGCGGCGGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G181200</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">TTGTCGGAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G183200</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">CGCCGCCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G183900</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">TCCGTACA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G188900</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">TACGTAAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G195500</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">CGTGAGTCACGTGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.006G221500</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">ACCGACAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G011600</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">TATCAATCAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G015000</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">GTGGGACCCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G020900</td>
+        <td style="text-align:right;padding-left: 1em;">16</td>
+        <td style="text-align:left;padding-left: 1em;">TTTTTGTCGTTTTGTG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G027000</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCGCCGCCGCCGCCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G028700</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAAGTTAGGTAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G033200</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCGAAAAAATCGGAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G043200</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ACCTCACGCGCCTCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G060500</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAATTTTAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G065900</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">TGGGGCCCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G071900</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ATTTGGCTTTTCGGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G074500</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">TAGATATTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G075400</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">ATCGTTGACTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G079700</td>
+        <td style="text-align:right;padding-left: 1em;">16</td>
+        <td style="text-align:left;padding-left: 1em;">ACGGTAAAAAATTAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G085600</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">AGGTTTCTTGTTGAACAAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G089600</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">GGACACGGAACT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G102900</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">GGAATCTTCTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G108500</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">CTCCAAAATCTCCACCAACCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G127800</td>
+        <td style="text-align:right;padding-left: 1em;">28</td>
+        <td style="text-align:left;padding-left: 1em;">CCGCCTCCGCCGCCACCACCGCCGCCGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G139600</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TAGTGAAGTTG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G140300</td>
+        <td style="text-align:right;padding-left: 1em;">20</td>
+        <td style="text-align:left;padding-left: 1em;">GTTTCTTGGAACACAAGTAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G140500</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">TAACACGCCACA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G162800</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">AGATATTTTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G177900</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGTCAACG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G179100</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">GCACGTGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G186700</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">CACGGTAAAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G187400</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">TGCTGACGTGGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G195900</td>
+        <td style="text-align:right;padding-left: 1em;">7</td>
+        <td style="text-align:left;padding-left: 1em;">TGAAAAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G201400</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">AGTGACGGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G206000</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">AGCCACGTGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G210600</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">TTGTACGGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G212900</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">AGTCAACG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G215800</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">TTACCTACCG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G221400</td>
+        <td style="text-align:right;padding-left: 1em;">20</td>
+        <td style="text-align:left;padding-left: 1em;">TTTTTTTTTGTCGTTTTCTG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G224400</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">AGTTAACGGCGTTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G224800</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">TTCAATTATTGGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G227300</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ATGGTGATGATGATG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G229600</td>
+        <td style="text-align:right;padding-left: 1em;">18</td>
+        <td style="text-align:left;padding-left: 1em;">AAATGGTGACGTGGCAGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G241600</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">GTGGCGGCGGCGGAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G247600</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">GTGACGTCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G253000</td>
+        <td style="text-align:right;padding-left: 1em;">7</td>
+        <td style="text-align:left;padding-left: 1em;">TTGAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G255100</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">CCGCCACCGCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G257100</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AGCAACTTGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.007G272600</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">GGCACGTGCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G001000</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">TTACGTGTTTTACACGTAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G019400</td>
+        <td style="text-align:right;padding-left: 1em;">18</td>
+        <td style="text-align:left;padding-left: 1em;">TAAAAAATATACCCTAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G023800</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">TGACGTGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G028000</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">AAAGTTAGGTATAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G037000</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAAGTGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G038600</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AAGTCAGTTAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G048100</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">CCGTTGACCG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G052000</td>
+        <td style="text-align:right;padding-left: 1em;">20</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAAAAAAAAAAGAGAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G058300</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGTCAACGAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G067300</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAGTTGGTAGGTGAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G072700</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">GCATTAATTAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G075900</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">TTTCCTCCGGATTTTCCGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G094800</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGAATGTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G098300</td>
+        <td style="text-align:right;padding-left: 1em;">17</td>
+        <td style="text-align:left;padding-left: 1em;">AACACGTGTTAAATTTG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G099400</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TTTTTTTACTTTTTG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G107000</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAATTGGATAAGGATAAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G122100</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">CTGCATGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G144300</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">CCACGTGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G146900</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">TTTACCTACCTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G157600</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TCTAGATCTGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G165000</td>
+        <td style="text-align:right;padding-left: 1em;">20</td>
+        <td style="text-align:left;padding-left: 1em;">CCACCACCACCTCCACCGAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G182900</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TCTCAACCGTTGGAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G183700</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TTTCCTTTTTTGGAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G189100</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">TTAAGTAAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G194600</td>
+        <td style="text-align:right;padding-left: 1em;">20</td>
+        <td style="text-align:left;padding-left: 1em;">TGCCGTGATATCTACGCTAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G220400</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">GGCGGTGGTGGTGGCGGTGGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G222400</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">CGGTGCCCCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G240700</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAAATATCTTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G242400</td>
+        <td style="text-align:right;padding-left: 1em;">9</td>
+        <td style="text-align:left;padding-left: 1em;">TTTGTCGGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G247800</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">ACCAGCTGTCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G251300</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAGTCAACG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G254600</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">CATCATCATCATCATCATC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G260900</td>
+        <td style="text-align:right;padding-left: 1em;">6</td>
+        <td style="text-align:left;padding-left: 1em;">TCAACA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G270400</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">CCTCCTCCTCCTCCTCCTC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.008G286100</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TTGACCGAGCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G008000</td>
+        <td style="text-align:right;padding-left: 1em;">18</td>
+        <td style="text-align:left;padding-left: 1em;">ACGTGTAAAACAAGCAAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G011200</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">GCAGCAGCAGCAGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G013900</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TTCCAAAAATGGAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G015000</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">CTCTCTCTCTCTCTCTCTCTC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G016300</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">ATTTTGGCGCCAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G025400</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">CTAGGGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G029600</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">CACCGACCAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G031200</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TTGTTTAAGGTAGGTGAACAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G043100</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">AGCGTTGACTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G043200</td>
+        <td style="text-align:right;padding-left: 1em;">12</td>
+        <td style="text-align:left;padding-left: 1em;">AGCGTTGACTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G065500</td>
+        <td style="text-align:right;padding-left: 1em;">18</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAATGCCACGTGACCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G065800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AGAAGCTTCTAGAAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G070800</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">CACTTTCACTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G075000</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">GGGGGGTAGGTGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G080000</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">CTTTGACTTTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G089300</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">CGGAGGTGGCGGCGGAGGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G106700</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AAATATGACCGTTAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G119900</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AATAAGTTTGGTAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G125900</td>
+        <td style="text-align:right;padding-left: 1em;">22</td>
+        <td style="text-align:left;padding-left: 1em;">TACGTGTATAATTTGTCTTCTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G137000</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">CCTCCGCCGCCGCCGCCGCCG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G150100</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">GGTAACTTGCTGAACAAGTTA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G160900</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">TATTGACCGGCGGTCAATA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G178300</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAAAAGAAAAAGTAAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G183300</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AATGGATAAGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G186600</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">AAAAAAGAAAAAGTGAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G187700</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">TAGAAGGTAGTTGGGAAAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G199700</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AGAATATTCCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G202200</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">GGGACCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G204000</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">CAAAAAGTTAAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G207000</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">CGCACGTGCG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G225000</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">ATGGACGGTGGAGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G251600</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">GCGCCGCC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.009G262200</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">CGGCGGAAATGGCGGCGGAGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G013500</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TTTACTTTTTTTTTTTTTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G024800</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">CCACGTGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G054000</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AATTGTCGGTGGAGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G056000</td>
+        <td style="text-align:right;padding-left: 1em;">16</td>
+        <td style="text-align:left;padding-left: 1em;">TTTTTTGTACCTTATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G071300</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">TGTAGTAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G079200</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">CAATCATAAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G087900</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">TTTCCAAAAAAGGAAAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G089100</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">GGGCCCAC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G103200</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">AGATATTTTTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G108800</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">TGCCACGTCAGCATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G114800</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">GCACGTGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G114900</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">GATATTGTCGGTGGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G117200</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">TCAATGATTGATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G118700</td>
+        <td style="text-align:right;padding-left: 1em;">17</td>
+        <td style="text-align:left;padding-left: 1em;">TAACGTAAAATTCAAGC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G126400</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TCGCCGGAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G136000</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCTAAACCCTAAATC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G136100</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">AACCCTAGAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G138200</td>
+        <td style="text-align:right;padding-left: 1em;">18</td>
+        <td style="text-align:left;padding-left: 1em;">CACAAAACGACAAAAAAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.010G159500</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">CGGAGGTGGCGGCGGAGGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G001800</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">TGCAAGTTGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G003900</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">GGTAACGTAAAATACAAGCAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G042600</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">GATGCTGACGTGGCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G057400</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">TTAGCAACTTGCAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G059800</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">GTGGTTGGTGG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G062100</td>
+        <td style="text-align:right;padding-left: 1em;">14</td>
+        <td style="text-align:left;padding-left: 1em;">GTAAGATTCGCTGA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G071100</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">ACCTCGTACC</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G080200</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">TAGATCTG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G116500</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCGAAAAAATCGGAG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G120300</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">GTGGGGACCACAA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G124200</td>
+        <td style="text-align:right;padding-left: 1em;">10</td>
+        <td style="text-align:left;padding-left: 1em;">GAGAATCTGT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G125200</td>
+        <td style="text-align:right;padding-left: 1em;">8</td>
+        <td style="text-align:left;padding-left: 1em;">CGCCGCCA</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G156900</td>
+        <td style="text-align:right;padding-left: 1em;">13</td>
+        <td style="text-align:left;padding-left: 1em;">GTTGGGACCACAT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G160400</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">CGTGTGGAACAAGTAACCT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G162900</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">CCTCCGCCGCCATTT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G191300</td>
+        <td style="text-align:right;padding-left: 1em;">11</td>
+        <td style="text-align:left;padding-left: 1em;">ATAACCGAATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G197300</td>
+        <td style="text-align:right;padding-left: 1em;">21</td>
+        <td style="text-align:left;padding-left: 1em;">TCTCCGCCGCCTTCTCCGCCG</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.011G203400</td>
+        <td style="text-align:right;padding-left: 1em;">15</td>
+        <td style="text-align:left;padding-left: 1em;">AATGACGTCATCATT</td>
+       </tr>
+      <tr>
+        <td style="text-align:right;">Phvul.L010000</td>
+        <td style="text-align:right;padding-left: 1em;">19</td>
+        <td style="text-align:left;padding-left: 1em;">CCTGTTTTACACGGCATCT</td>
+       </tr>
+    </tbody>
+  </table>
+</p>
+<p>
+Random model letter frequencies (data/fasta/fasta_background/Pvulgaris_order1.bfile):
+<br/>
+
+A 0.378 C 0.122 G 0.122 T 0.378 </p>
+</div>
+<hr>
+<center><big><b><a name="sec_i">SECTION I: HIGH-SCORING MOTIF OCCURENCES</a></b></big></center>
+<hr>
+<ul>
+<li>
+There were 60 motif occurences with a p-value less than 1e-05.
+
+The full set of motif occurences can be seen in the
+TSV (tab-delimited values) output file
+<a href="fimo.tsv">fimo.tsv</a>, 
+the GFF3 file 
+<a href="fimo.gff">fimo.gff</a> 
+which may be suitable for uploading to the 
+<a href="http://genome.ucsc.edu/cgi-bin/hgTables">UCSC Genome Table Browser</a>
+(assuming the FASTA input sequences included genomic coordinates in UCSC or Galaxy format),
+or the XML file 
+<a href="fimo.xml">fimo.xml</a>.
+</li>
+<li>
+The <i>p</i>-value of a motif occurrence is defined as the
+probability of a random sequence of the same length as the motif
+matching that position of the sequence with as good or better a score.
+</li>
+<li>
+The score for the match of a position in a sequence to a motif
+is computed by summing the appropriate entries from each column of
+the position-dependent scoring matrix that represents the motif.
+</li>
+<li>
+The q-value of a motif occurrence is defined as the
+false discovery rate if the occurrence is accepted as significant.
+</li>
+<li>The table is sorted by increasing <i>p</i>-value.</li>
+</ul>
+<table border="1">
+<thead>
+<tr>
+<th>Motif ID</th>
+<th>Alt ID</th>
+<th>Sequence Name</th>
+<th>Strand</th>
+<th>Start</th>
+<th>End</th>
+<th>p-value</th>
+<th>q-value</th>
+<th>Matched Sequence</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+      <td style="text-align:left;">Phvul.001G060200</td>
+      <td style="text-align:left;">MP00464</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">312</td>
+      <td style="text-align:left;">325</td>
+      <td style="text-align:left;">1.77e-08</td>
+      <td style="text-align:left;">0.000105</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACCGTTGACTTTTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.007G075400</td>
+      <td style="text-align:left;">MP00561</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">325</td>
+      <td style="text-align:left;">3.33e-08</td>
+      <td style="text-align:left;">0.000196</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACCGTTGACTTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G058300</td>
+      <td style="text-align:left;">MP00422</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">325</td>
+      <td style="text-align:left;">4.29e-08</td>
+      <td style="text-align:left;">0.000253</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAAGTCAACGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.009G043100</td>
+      <td style="text-align:left;">MP00408</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">325</td>
+      <td style="text-align:left;">5.21e-08</td>
+      <td style="text-align:left;">0.000309</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACCGTTGACTTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.006G123000</td>
+      <td style="text-align:left;">MP00171</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">325</td>
+      <td style="text-align:left;">6.41e-08</td>
+      <td style="text-align:left;">0.000379</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAAGTCAACGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.001G088200</td>
+      <td style="text-align:left;">MP00506</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">325</td>
+      <td style="text-align:left;">1.19e-07</td>
+      <td style="text-align:left;">0.000701</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAAGTCAACGGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.002G196800</td>
+      <td style="text-align:left;">MP00440</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">325</td>
+      <td style="text-align:left;">1.34e-07</td>
+      <td style="text-align:left;">0.000795</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACCGTTGACTTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.009G080000</td>
+      <td style="text-align:left;">MP00531</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">311</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">1.42e-07</td>
+      <td style="text-align:left;">0.000836</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CGTTGACTTTTGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.006G111700</td>
+      <td style="text-align:left;">MP00525</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">314</td>
+      <td style="text-align:left;">324</td>
+      <td style="text-align:left;">1.83e-07</td>
+      <td style="text-align:left;">0.00109</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAGTCAACGG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.009G043200</td>
+      <td style="text-align:left;">MP00304</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">314</td>
+      <td style="text-align:left;">325</td>
+      <td style="text-align:left;">2.27e-07</td>
+      <td style="text-align:left;">0.00134</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACCGTTGACTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.007G177900</td>
+      <td style="text-align:left;">MP00284</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">2.44e-07</td>
+      <td style="text-align:left;">0.00144</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAAGTCAACG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.005G181800</td>
+      <td style="text-align:left;">MP00251</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">311</td>
+      <td style="text-align:left;">325</td>
+      <td style="text-align:left;">2.5e-07</td>
+      <td style="text-align:left;">0.00148</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACCGTTGACTTTTGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.002G293200</td>
+      <td style="text-align:left;">MP00448</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">3.23e-07</td>
+      <td style="text-align:left;">0.00191</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAAGTCAACG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.002G016100</td>
+      <td style="text-align:left;">MP00275</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">3.23e-07</td>
+      <td style="text-align:left;">0.00191</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAAGTCAACG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G251300</td>
+      <td style="text-align:left;">MP00299</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">3.74e-07</td>
+      <td style="text-align:left;">0.00221</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAAGTCAACG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.010G013500</td>
+      <td style="text-align:left;">MP00407</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">228</td>
+      <td style="text-align:left;">248</td>
+      <td style="text-align:left;">3.99e-07</td>
+      <td style="text-align:left;">0.00224</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTTTCTTTTTATTTTTTCCCT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.002G240900</td>
+      <td style="text-align:left;">MP00167</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">4.78e-07</td>
+      <td style="text-align:left;">0.00284</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAAGTCAACG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.006G147800</td>
+      <td style="text-align:left;">MP00209</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">305</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">4.94e-07</td>
+      <td style="text-align:left;">0.00291</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CGTTGACTTTTGACCGTTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.001G010400</td>
+      <td style="text-align:left;">MP00240</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">673</td>
+      <td style="text-align:left;">687</td>
+      <td style="text-align:left;">7.38e-07</td>
+      <td style="text-align:left;">0.00435</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TCATCTGCACCGCTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.006G053300</td>
+      <td style="text-align:left;">MP00455</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">313</td>
+      <td style="text-align:left;">325</td>
+      <td style="text-align:left;">7.81e-07</td>
+      <td style="text-align:left;">0.00462</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ACCGTTGACTTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.006G123700</td>
+      <td style="text-align:left;">MP00607</td>
+      <td style="text-align:left;">Phvul.001G004200</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">223</td>
+      <td style="text-align:left;">231</td>
+      <td style="text-align:left;">7.87e-07</td>
+      <td style="text-align:left;">0.00465</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTTAGGGCG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G270400</td>
+      <td style="text-align:left;">MP00229</td>
+      <td style="text-align:left;">Phvul.004G173900</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">737</td>
+      <td style="text-align:left;">755</td>
+      <td style="text-align:left;">1.05e-06</td>
+      <td style="text-align:left;">0.006</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CTTCTTCTTGTTCATCCAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.007G027000</td>
+      <td style="text-align:left;">MP00217</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">673</td>
+      <td style="text-align:left;">687</td>
+      <td style="text-align:left;">1.37e-06</td>
+      <td style="text-align:left;">0.00805</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TCATCTGCACCGCTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.003G248500</td>
+      <td style="text-align:left;">MP00402</td>
+      <td style="text-align:left;">Phvul.001G004200</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">474</td>
+      <td style="text-align:left;">494</td>
+      <td style="text-align:left;">1.64e-06</td>
+      <td style="text-align:left;">0.00935</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CTTTTTTTTTTTTTACTTTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.002G055800</td>
+      <td style="text-align:left;">MP00549</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">673</td>
+      <td style="text-align:left;">687</td>
+      <td style="text-align:left;">1.65e-06</td>
+      <td style="text-align:left;">0.00977</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TCATCTGCACCGCTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.006G047800</td>
+      <td style="text-align:left;">MP00194</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">673</td>
+      <td style="text-align:left;">687</td>
+      <td style="text-align:left;">1.73e-06</td>
+      <td style="text-align:left;">0.0102</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CAGCGGTGCAGATGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G052000</td>
+      <td style="text-align:left;">MP00610</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">174</td>
+      <td style="text-align:left;">193</td>
+      <td style="text-align:left;">2.1e-06</td>
+      <td style="text-align:left;">0.0117</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGAAAAGAGAAAAAAATAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.003G102500</td>
+      <td style="text-align:left;">MP00520</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">673</td>
+      <td style="text-align:left;">687</td>
+      <td style="text-align:left;">2.39e-06</td>
+      <td style="text-align:left;">0.0141</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TCATCTGCACCGCTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.007G043200</td>
+      <td style="text-align:left;">MP00434</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">923</td>
+      <td style="text-align:left;">937</td>
+      <td style="text-align:left;">2.73e-06</td>
+      <td style="text-align:left;">0.0161</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATGCCACGCGTTTTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.007G255100</td>
+      <td style="text-align:left;">MP00411</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">674</td>
+      <td style="text-align:left;">684</td>
+      <td style="text-align:left;">3.02e-06</td>
+      <td style="text-align:left;">0.0178</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TCTGCACCGCT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G182900</td>
+      <td style="text-align:left;">MP00451</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">316</td>
+      <td style="text-align:left;">330</td>
+      <td style="text-align:left;">3.27e-06</td>
+      <td style="text-align:left;">0.0117</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATCCACCGTTGACT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.007G257100</td>
+      <td style="text-align:left;">MP00308</td>
+      <td style="text-align:left;">Phvul.004G173900</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">514</td>
+      <td style="text-align:left;">524</td>
+      <td style="text-align:left;">3.62e-06</td>
+      <td style="text-align:left;">0.0215</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGCAACTTGTC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.002G081600</td>
+      <td style="text-align:left;">MP00067</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">314</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">3.88e-06</td>
+      <td style="text-align:left;">0.023</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAGTCAACG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G048100</td>
+      <td style="text-align:left;">MP00618</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">315</td>
+      <td style="text-align:left;">324</td>
+      <td style="text-align:left;">3.91e-06</td>
+      <td style="text-align:left;">0.0232</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CCGTTGACTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G182900</td>
+      <td style="text-align:left;">MP00451</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">379</td>
+      <td style="text-align:left;">393</td>
+      <td style="text-align:left;">3.96e-06</td>
+      <td style="text-align:left;">0.0117</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTTTGACCGTTCAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.005G044600</td>
+      <td style="text-align:left;">MP00250</td>
+      <td style="text-align:left;">Phvul.004G173900</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">500</td>
+      <td style="text-align:left;">520</td>
+      <td style="text-align:left;">4.12e-06</td>
+      <td style="text-align:left;">0.0242</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTTGCTTATGATTGAAGACA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.010G159500</td>
+      <td style="text-align:left;">MP00526</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">667</td>
+      <td style="text-align:left;">685</td>
+      <td style="text-align:left;">4.4e-06</td>
+      <td style="text-align:left;">0.0258</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAGACAGCGGTGCAGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.009G089300</td>
+      <td style="text-align:left;">MP00526</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">667</td>
+      <td style="text-align:left;">685</td>
+      <td style="text-align:left;">4.4e-06</td>
+      <td style="text-align:left;">0.0258</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAGACAGCGGTGCAGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.005G180600</td>
+      <td style="text-align:left;">MP00526</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">667</td>
+      <td style="text-align:left;">685</td>
+      <td style="text-align:left;">4.4e-06</td>
+      <td style="text-align:left;">0.0258</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATAGACAGCGGTGCAGAT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.009G225000</td>
+      <td style="text-align:left;">MP00151</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">372</td>
+      <td style="text-align:left;">385</td>
+      <td style="text-align:left;">4.71e-06</td>
+      <td style="text-align:left;">0.0278</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTGGCCGGTTGAAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.009G183300</td>
+      <td style="text-align:left;">MP00236</td>
+      <td style="text-align:left;">Phvul.001G004200</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">544</td>
+      <td style="text-align:left;">554</td>
+      <td style="text-align:left;">5.03e-06</td>
+      <td style="text-align:left;">0.0299</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TATGGATAAGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.005G047300</td>
+      <td style="text-align:left;">MP00205</td>
+      <td style="text-align:left;">Phvul.004G173900</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">500</td>
+      <td style="text-align:left;">520</td>
+      <td style="text-align:left;">5.88e-06</td>
+      <td style="text-align:left;">0.0346</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTCTTCAATCATAAGCAACT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.007G212900</td>
+      <td style="text-align:left;">MP00069</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">316</td>
+      <td style="text-align:left;">323</td>
+      <td style="text-align:left;">5.98e-06</td>
+      <td style="text-align:left;">0.0354</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTCAACG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.007G071900</td>
+      <td style="text-align:left;">MP00449</td>
+      <td style="text-align:left;">Phvul.001G004200</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">954</td>
+      <td style="text-align:left;">968</td>
+      <td style="text-align:left;">6.42e-06</td>
+      <td style="text-align:left;">0.0379</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAATGGCCTTTCTGC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.011G001800</td>
+      <td style="text-align:left;">MP00181</td>
+      <td style="text-align:left;">Phvul.004G173900</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">514</td>
+      <td style="text-align:left;">524</td>
+      <td style="text-align:left;">6.44e-06</td>
+      <td style="text-align:left;">0.0381</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GACAAGTTGCT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.005G150100</td>
+      <td style="text-align:left;">MP00233</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">359</td>
+      <td style="text-align:left;">379</td>
+      <td style="text-align:left;">6.6e-06</td>
+      <td style="text-align:left;">0.0388</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CCGGCCAAATTCTCTCTTTCT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.003G248500</td>
+      <td style="text-align:left;">MP00402</td>
+      <td style="text-align:left;">Phvul.001G004200</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">980</td>
+      <td style="text-align:left;">1000</td>
+      <td style="text-align:left;">6.72e-06</td>
+      <td style="text-align:left;">0.0167</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">CTTCCTTCCTCACTTCTTTTT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G052000</td>
+      <td style="text-align:left;">MP00610</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">172</td>
+      <td style="text-align:left;">191</td>
+      <td style="text-align:left;">6.99e-06</td>
+      <td style="text-align:left;">0.0148</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AAAAGAGAAAAAAATAGAAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.011G003900</td>
+      <td style="text-align:left;">MP00431</td>
+      <td style="text-align:left;">Phvul.004G173900</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">500</td>
+      <td style="text-align:left;">520</td>
+      <td style="text-align:left;">7.47e-06</td>
+      <td style="text-align:left;">0.0439</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGTTGCTTATGATTGAAGACA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.006G139200</td>
+      <td style="text-align:left;">MP00552</td>
+      <td style="text-align:left;">Phvul.001G004200</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">883</td>
+      <td style="text-align:left;">897</td>
+      <td style="text-align:left;">7.56e-06</td>
+      <td style="text-align:left;">0.0446</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TGTTTTTTTTACTGT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.011G057400</td>
+      <td style="text-align:left;">MP00195</td>
+      <td style="text-align:left;">Phvul.004G173900</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">512</td>
+      <td style="text-align:left;">525</td>
+      <td style="text-align:left;">7.85e-06</td>
+      <td style="text-align:left;">0.0464</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAAGCAACTTGTCA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G052000</td>
+      <td style="text-align:left;">MP00610</td>
+      <td style="text-align:left;">Phvul.001G004200</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">480</td>
+      <td style="text-align:left;">499</td>
+      <td style="text-align:left;">7.93e-06</td>
+      <td style="text-align:left;">0.0148</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TAAAAAAAAAAAAAGAGTAA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.007G162800</td>
+      <td style="text-align:left;">MP00338</td>
+      <td style="text-align:left;">Phvul.001G004200</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">108</td>
+      <td style="text-align:left;">119</td>
+      <td style="text-align:left;">8.01e-06</td>
+      <td style="text-align:left;">0.0473</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AGATATTTTCAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.011G162900</td>
+      <td style="text-align:left;">MP00358</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">670</td>
+      <td style="text-align:left;">684</td>
+      <td style="text-align:left;">8.31e-06</td>
+      <td style="text-align:left;">0.0492</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TCTGCACCGCTGTCT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.002G035900</td>
+      <td style="text-align:left;">MP00227</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">670</td>
+      <td style="text-align:left;">689</td>
+      <td style="text-align:left;">8.49e-06</td>
+      <td style="text-align:left;">0.0498</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">AATCATCTGCACCGCTGTCT</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.003G248500</td>
+      <td style="text-align:left;">MP00402</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">910</td>
+      <td style="text-align:left;">930</td>
+      <td style="text-align:left;">8.78e-06</td>
+      <td style="text-align:left;">0.0167</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">GCGTTTTCTTTCTTACTTTAC</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G286100</td>
+      <td style="text-align:left;">MP00094</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">511</td>
+      <td style="text-align:left;">521</td>
+      <td style="text-align:left;">8.84e-06</td>
+      <td style="text-align:left;">0.029</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTGACCGCTTA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.002G016700</td>
+      <td style="text-align:left;">MP00401</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">673</td>
+      <td style="text-align:left;">687</td>
+      <td style="text-align:left;">9.04e-06</td>
+      <td style="text-align:left;">0.0534</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TCATCTGCACCGCTG</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.005G121800</td>
+      <td style="text-align:left;">MP00280</td>
+      <td style="text-align:left;">Phvul.004G173900</td>
+      <td style="text-align:center;">+</td>
+      <td style="text-align:left;">829</td>
+      <td style="text-align:left;">847</td>
+      <td style="text-align:left;">9.76e-06</td>
+      <td style="text-align:left;">0.0574</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">ATGGCTTCACCTAAAGGGA</td>
+   </tr>
+    <tr>
+      <td style="text-align:left;">Phvul.008G286100</td>
+      <td style="text-align:left;">MP00094</td>
+      <td style="text-align:left;">Phvul.006G134700</td>
+      <td style="text-align:center;">-</td>
+      <td style="text-align:left;">304</td>
+      <td style="text-align:left;">314</td>
+      <td style="text-align:left;">9.78e-06</td>
+      <td style="text-align:left;">0.029</td>
+      <td style="text-align:left;font-size:x-large;font-family:monospace;">TTGACCGTTCT</td>
+   </tr>
+</tbody>
+</table>
+
+<hr>
+<center><big><b><a name="debugging_information">DEBUGGING INFORMATION</a></b></big></center>
+<hr>
+<p>
+Command line:
+</p>
+<pre>
+fimo --bfile data/fasta/fasta_background/Pvulgaris_order1.bfile --thresh 1e-5 --no-pgc --oc results/fimo data/motivos/Pvu_TF_binding_motifs.meme data/fasta/fasta_analisis/target_batch.fasta
+</pre>
+<p>
+Settings:
+</p>
+<pre>
+<table>
+  <tr>
+    <td style="padding-right: 2em">output_directory = results/fimo</td>
+    <td style="padding-left: 5em; padding-right: 2em">MEME file name = data/motivos/Pvu_TF_binding_motifs.meme</td>
+    <td style="padding-left: 5em; padding-right: 2em">sequence file name = data/fasta/fasta_analisis/target_batch.fasta</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">background file name = data/fasta/fasta_background/Pvulgaris_order1.bfile</td>
+    <td style="padding-left: 5em; padding-right: 2em">alphabet = DNA</td>
+    <td style="padding-left: 5em; padding-right: 2em">max stored scores = 100000</td>
+  </tr>  <tr>
+    <td style="padding-right: 2em">allow clobber = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">compute q-values = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">parse genomic coord. = false</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">text only = false</td>
+    <td style="padding-left: 5em; padding-right: 2em">scan both strands = true</td>
+    <td style="padding-left: 5em; padding-right: 2em">max strand = false</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">threshold type = p-value</td>
+    <td style="padding-left: 5em; padding-right: 2em">output theshold = 1e-05</td>
+    <td style="padding-left: 5em; padding-right: 2em">pseudocount = 0.1</td>
+  </tr>
+  <tr>
+    <td style="padding-right: 2em">alpha = 1</td>
+    <td style="padding-left: 5em; padding-right: 2em">verbosity = 2</td>
+    <td style="padding-left: 5em; padding-right: 2em"></td>
+  </tr>
+
+</table>
+</pre>
+<p>
+This information can be useful in the event you wish to report a
+problem with the FIMO software.
+</p>
+<hr>
+<span style="background-color: #DDDDFF"><a href="#top_buttons"><b>Go to top</b></a></span>
+</body>
+</html>

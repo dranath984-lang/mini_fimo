@@ -1,0 +1,8 @@
+name: pipeline_phr1
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - meme=5.5.9
+  - seqkit=2.13.0
