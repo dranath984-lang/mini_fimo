@@ -33,7 +33,7 @@ Este programa fue diseñado y probado en el siguiente entorno de hardware y soft
 
 * Sistema Operativo: Ubuntu 24.04.3 LTS
 * Procesador: Intel Xeon CPU E5-2696 v4 (22 núcleos físicos)
-* Memoria RAM: [Ingresa tu RAM aquí, ej. 64 GB]
+* Memoria RAM: [64 GB]
 * Gestor de paquetes: Conda
 5. Instrucciones de Uso
 Paso 1: Instalar y activar el entorno Abre la terminal en la carpeta principal del proyecto y ejecuta:
